@@ -15,7 +15,7 @@
 
 seconds = int(input("Введите количество секунд"))
 days = str(seconds // 86400)
-hours = (seconds % 86400) // 3600
+hours = str((seconds % 86400) // 3600)
 minutes = (seconds // 60) % 60
 sec = seconds % 60
 if minutes < 10:
@@ -26,7 +26,6 @@ if sec < 10:
     sec = '0' + str(sec)
 else:
     sec = str(sec)
-hours = str(hours)
 if seconds < 60:
     print(sec + ' сек.')
 if seconds < 3600:
