@@ -28,9 +28,9 @@ else:
     sec = str(sec)
 if seconds < 60:
     print(sec + ' сек.')
-if seconds < 3600:
+elif seconds < 3600:
     print(minutes + ' мин, ' + sec + ' сек. ')
-if seconds < 86400:
+elif seconds < 86400:
     print(hours + ' час, ' + minutes + ' мин, ' + sec + ' сек. ')
-if seconds > 86400:
+elif seconds > 86400:
     print(days + ' дн, ' + hours + ' час, ' + minutes + ' мин, ' + sec + ' сек. ')
