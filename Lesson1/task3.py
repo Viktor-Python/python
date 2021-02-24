@@ -13,3 +13,13 @@
 ...
 100 процентов
 """
+percent = 0
+
+while percent < 100:
+    percent += 1
+    if 5 <= percent % 10 or percent % 10 == 0 or 10 < percent < 15:
+        print(percent, 'процентов')
+    elif 2 <= percent % 10 <= 4:
+        print(percent, 'процента')
+    elif percent % 10 == 1:
+        print(percent, 'процент')
