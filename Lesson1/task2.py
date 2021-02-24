@@ -9,4 +9,4 @@ while True:
     numbers = sum(map(int, list(input("Введите число: "))))
     if numbers == 0:
         break
-    print(numbers)
+    print(f"Сумма цифр равна: {numbers}")
