@@ -13,7 +13,7 @@
 1 час 16 мин 7 сек
 """
 
-seconds = int(input("Введите количество секунд"))
+seconds = int(input("Введите количество секунд: "))
 days = str(seconds // 86400)
 hours = str((seconds % 86400) // 3600)
 minutes = (seconds // 60) % 60
