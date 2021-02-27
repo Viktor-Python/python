@@ -19,10 +19,10 @@ hours = (seconds % 86400) // 3600
 minutes = (seconds // 60) % 60
 sec = seconds % 60
 if seconds < 60:
-    print('{sec}  сек. ')
+    print(f'{sec}  сек. ')
 elif seconds < 3600:
-    print('{minutes} мин, {sec}  сек. ')
+    print(f'{minutes} мин, {sec}  сек. ')
 elif seconds < 86400:
     print(f' {hours}  час,  {minutes} мин, {sec}  сек. ')
-elif seconds >= 86400:
+else:
     print(f'{days} дн, {hours} час, {minutes} мин, {sec} сек. ')
