@@ -14,23 +14,15 @@
 """
 
 seconds = int(input("Введите количество секунд: "))
-days = str(seconds // 86400)
-hours = str((seconds % 86400) // 3600)
+days = seconds // 86400
+hours = (seconds % 86400) // 3600
 minutes = (seconds // 60) % 60
 sec = seconds % 60
-if minutes < 10:
-    minutes = '0' + str(minutes)
-else:
-    minutes = str(minutes)
-if sec < 10:
-    sec = '0' + str(sec)
-else:
-    sec = str(sec)
 if seconds < 60:
-    print(sec + ' сек.')
+    print('{sec}  сек. ')
 elif seconds < 3600:
-    print(minutes + ' мин, ' + sec + ' сек. ')
+    print('{minutes} мин, {sec}  сек. ')
 elif seconds < 86400:
-    print(hours + ' час, ' + minutes + ' мин, ' + sec + ' сек. ')
-elif seconds > 86400:
-    print(days + ' дн, ' + hours + ' час, ' + minutes + ' мин, ' + sec + ' сек. ')
+    print(f' {hours}  час,  {minutes} мин, {sec}  сек. ')
+elif seconds >= 86400:
+    print(f'{days} дн, {hours} час, {minutes} мин, {sec} сек. ')
