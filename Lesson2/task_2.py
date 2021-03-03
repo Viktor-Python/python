@@ -28,3 +28,11 @@ my_list.insert(12, '"')
 my_list.insert(14, '"')
 message = ' '.join(my_list)
 print(message)
+for item in list(message):
+    if item.isdigit():
+        print(item)
+# for item in my_list:
+#     if int(item) < 10:
+#         continue
+#     # elif int(item) < 10:
+#     #     print(item)
