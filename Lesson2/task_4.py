@@ -21,15 +21,15 @@ prices = [57.8, 46.51, 97, 5456.56, 65.5, 98.12, 58.68, 84.6, 68.56, 568.5, 554.
 print(f'Проверка id: {id(prices)}\n')
 prices.sort()
 for i in prices:
-    kopecks = int((i % 1)*100)
+    kopecks = int((i % 1)*100 + .1)
     print(f'{int(i // 1)}  руб {kopecks:02d} коп')
 print(f'Проверка id: {id(prices)}\n')
 prices.sort(reverse=True)
 for i in prices:
-    kopecks = int((i % 1)*100)
+    kopecks = int((i % 1)*100 + .1)
     print(f'{int(i // 1)}  руб {kopecks:02d} коп')
 print(f'Проверка id: {id(prices)}\n')
 for i in prices[:5]:
-    kopecks = int((i % 1)*100)
+    kopecks = int((i % 1)*100 + .1)
     print(f'{int(i // 1)}  руб {kopecks:02d} коп')
 print(f'Проверка id: {id(prices)}\n')
