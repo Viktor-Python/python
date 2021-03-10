@@ -6,11 +6,20 @@
 # >>> num_translate_adv("two")
 "два"
 """
+translate = {'zero': 'ноль',
+             'one': 'один',
+             'two': 'два',
+             'three': 'три',
+             'four': 'четыре',
+             'five': 'пять',
+             'six': 'шесть',
+             'seven': 'семь',
+             'eight': 'восемь',
+             'nine': 'девять',
+             'ten': 'десять'}
 
 
 def num_translate(num):
-    translate = {'zero': 'ноль', 'one': 'один', 'two': 'два', 'three': 'три', 'four': 'четыре', 'five': 'пять',
-                 'six': 'шесть', 'seven': 'семь', 'eight': 'восемь', 'nine': 'девять', 'ten': 'десять'}
     if not num.islower():
         return print(translate.get(num.lower()).title())
     else:
