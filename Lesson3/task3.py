@@ -10,25 +10,15 @@
 """
 
 
-def thesaurus(name):
-    list_of_names = {
-        "В": ["Виктор", "Валентина"],
-        "И": ["Иван", "Илья"],
-        "М": ["Мария", "Максим", "Михаил"],
-        "П": ["Петр"],
-        "Р": ["Роман", "Рита"],
-    }
+def thesaurus(*names):
+    list_of_name = {}
+    for name in names:
+        first = name[0]
+        list_of_name.setdefault(first, [])
+        list_of_name[first].append(name)
+    return list_of_name
 
 
-def thesaurus(*args):
-    dictionary = {}
-    for name in args:
-        first_letter = name[0]
-        dictionary.setdefault(first_letter, [])
-        dictionary[first_letter].append(name)
-    return dictionary
-
-
-d = thesaurus("Иван", "Мария", "Петр", "Илья")
+d = thesaurus("Иван", "Мария", "Петр", "Илья", "Виктор", "Анатолий", "Татьяна", "Тимур", "Олеся", "Юрий", "Дмитрий")
 for first_letter in sorted(d.keys()):
     print(f'{first_letter}: {d[first_letter]}')
