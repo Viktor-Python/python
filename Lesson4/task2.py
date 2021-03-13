@@ -39,8 +39,8 @@ def get_currency_rate(currencies):
 
 
 while True:
-    currency = input('Введите буквенный код валюты: ')
+    currency = get_currency_rate(input('Введите буквенный код валюты: '))
     if currency is None:
-        print(get_currency_rate(currency), 'руб')
+        print(currency)
     else:
-        print(get_currency_rate(currency))
+        print(currency, 'руб')
